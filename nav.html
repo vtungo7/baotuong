@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Memories Navigation</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --background-color: #f8f9fa;
+            --text-color: #333;
+            --hover-color: rgba(255,255,255,0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            line-height: 1.6;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 1rem 5%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 8px;
+        }
+
+        .nav-links a i {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: var(--hover-color);
+            transform: translateY(-3px);
+        }
+
+        .nav-links a:hover i {
+            transform: rotate(15deg);
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover::before {
+            left: 0;
+            width: 100%;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-menu-toggle:hover {
+            transform: rotate(90deg);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+                padding: 1rem;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .navbar.active .nav-links {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">
+            <img src="/api/placeholder/50/50" alt="School Logo">
+            My School Journey
+        </a>
+
+        <div class="mobile-menu-toggle" onclick="this.parentElement.classList.toggle('active')">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="nav-links">
+            <a href="#academics">
+                <i class="fas fa-book"></i>
+                Academics
+            </a>
+            <a href="#activities">
+                <i class="fas fa-users"></i>
+                Activities
+            </a>
+            <a href="#memories">
+                <i class="fas fa-photo-video"></i>
+                Memories
+            </a>
+            <a href="#achievements">
+                <i class="fas fa-trophy"></i>
+                Achievements
+            </a>
+        </div>
+    </nav>
+
+    <script>
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const navbar = document.querySelector('.navbar');
+
+        mobileToggle.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
