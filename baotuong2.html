@@ -1,274 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My School Journey</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #3498db;
-            --secondary-color: #2ecc71;
-            --background-color: #f8f9fa;
-            --text-color: #333;
-        }
+	<meta charset = "utf-8">
+	<title> TRƯỜNG THPT QUỐC OAI </title>
+	<style>
+		.container {
+			width: 90%;
+			overflow: hidden;
+			margin: 0 auto;
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+		}
+		.column {
+			width: 90%;
+			background-color: #e4eeed;
+			padding: 15px;
+			margin: 10px 0;
+			border-radius: 25px;
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            background-color: var(--background-color);
-            color: var(--text-color);
-        }
-
-        .gradient-background {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-        }
-
-        header {
-            text-align: center;
-            padding: 4rem 1rem;
-            background: linear-gradient(135deg, #3498db, #2ecc71);
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.1);
-            transform: skewY(-6deg);
-            transform-origin: top left;
-        }
-
-        .header-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .nav-container {
-            background-color: rgba(255,255,255,0.1);
-            padding: 1rem 0;
-        }
-
-        .nav-container {
-            background-color: rgba(255,255,255,0.1);
-            padding: 1rem 0;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            padding: 10px 15px;
-            border-radius: 5px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        nav a::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: -100%;
-            width: 100%;
-            height: 2px;
-            background-color: white;
-            transition: all 0.3s ease;
-        }
-
-        nav a:hover::before {
-            left: 0;
-        }
-
-        nav a:hover {
-            background-color: rgba(255,255,255,0.2);
-            transform: translateY(-3px);
-        }
-
-        nav a i {
-            transition: transform 0.3s ease;
-        }
-
-        nav a:hover i {
-            transform: scale(1.2) rotate(15deg);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 15px;
-        }
-
-        .section {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            padding: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .timeline {
-            position: relative;
-            padding: 1rem 0;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 2px;
-            height: 100%;
-            background-color: var(--primary-color);
-        }
-
-        .timeline-item {
-            display: flex;
-            justify-content: space-between;
-            position: relative;
-            margin-bottom: 2rem;
-            padding: 1rem;
-            background-color: #f9f9f9;
-            border-radius: 10px;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: var(--primary-color);
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .timeline-item:nth-child(even)::before {
-            left: -30px;
-        }
-
-        .timeline-item:nth-child(odd)::before {
-            right: -30px;
-        }
-
-        .timeline-content {
-            width: 45%;
-        }
-
-        .timeline-item:nth-child(even) .timeline-content {
-            text-align: right;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-        }
-
-        @media (max-width: 768px) {
-            .timeline::before {
-                left: 30px;
-            }
-
-            .timeline-item {
-                flex-direction: column;
-            }
-
-            .timeline-content {
-                width: 100%;
-                text-align: left !important;
-            }
-
-            .timeline-item::before {
-                left: 10px !important;
-                right: auto !important;
-                top: 30px;
-            }
-        }
-    </style>
+		}
+		.back {
+			background-image: linear-gradient(to bottom left, #66FFFF, #CBE7E3); overflow: hidden;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+		 }
+		.nav {background-image: linear-gradient(to right bottom, #29c9c9, #b1e6e3); overflow: hidden;
+			border-radius: 10px;
+		}
+		.nav a{
+			font-size: 14px;
+			font-family: Tahoma;
+			font-weight: bold;
+			float: right;
+			display: block;
+			color: #3366CC;
+			padding: 14px 100px;
+			text-decoration: none;
+		}
+		li {font-size: 40;}
+		.footer {background-color: black; padding: 5px; text-align: center; color: white;}
+	</style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <h1>My School Journey</h1>
-            <p>A chronicle of growth, learning, and achievements</p>
-        </div>
-        <div class="nav-container">
-            <nav>
-                <a href="nav.html"><i class="fas fa-book"></i> Academics</a>
-                <a href="#activities"><i class="fas fa-users"></i> Activities</a>
-                <a href="#memories"><i class="fas fa-photo-video"></i> Memories</a>
-                <a href="#achievements"><i class="fas fa-trophy"></i> Achievements</a>
-            </nav>
-        </div>
-    </header>
+	<!-- Phần đầu trang -->
+		<img style="border-radius: 10px;align-content: center;display: block;margin: auto;" src = "C3QuocOai.png">
+	<!-- Thanh điều hướng -->
+	<div class = "nav">
+		<a href = "#lien_he"> Liên hệ </a>
+		<a href = "#thanh_tich"> Thành tích</a>
+		<a href = "#hoat_dong"> Hoạt động </a>
+		<a href = "#gioi_thieu"> Giới thiệu </a>
+		<img style = "border-radius: 50%" src = "logo.jpg" height = 30 width = 30>
+	</div>
+	<!-- Phần nội dung chính -->
+	<div class="back">
+	<div class="container">
+		<div class="column">
+		<h2 id = "gioi_thieu"> Giới thiệu </h2>
+		<video src="60nam.mp4" controls></video>
+		<ul>
+		<li> Trường THPT Quốc Oai được thành lập vào năm 1962. Trải qua hơn 60 năm lịch sử xây dựng và phát triển, trường đã trở thành một địa chỉ giáo dục uy tín, là nơi ươm mầm cho nhiều thế hệ học sinh trưởng thành. Nhà trường luôn chú trọng phát triển cả về học thuật và giáo dục đạo đức, góp phần đào tạo nguồn nhân lực chất lượng cao cho quê hương đất nước. </li>
+		<li> Các tiêu chí nhà trường hướng đến:
+			<ul type = "circle">
+			<li> Trường học an toàn và thân thiện cho học sinh: Trường luôn đề cao sự an toàn và thân thiện trong mọi hoạt động.</li>
+			<li> Trường học có không gian học tập và vui chơi xanh – sạch – đẹp. Năm học 2023 - 2024, Trường THPT Quốc Oai đạt kiểm định Mức độ 3, được công nhận đạt chuẩn Quốc gia Mức độ 2, thư viện nhà trường đạt Thư viện Tiên tiến.</li>
+		 	<li> Trường học có giáo viên thân thiện: Các thầy cô giáo, cán bộ nhân viên của trường không chỉ giỏi về chuyên môn mà còn rất thân thiện, nhiệt tình với học sinh. Thầy cô luôn lắng nghe và hỗ trợ các em trong học tập cũng như trong cuộc sống hàng ngày.</li>
+		 	<li> Trường học có phương pháp dạy học hấp dẫn: Nhà trường luôn coi trọng đổi mới phương pháp giảng dạy, áp dụng công nghệ thông tin và các phương pháp học tập hiện đại như học qua dự án, học nhóm, thảo luận,...</li>
+		 	<li> Trường học có nề nếp học đường kỷ luật tốt: Trường THPT Quốc Oai có nền nếp kỷ luật nghiêm túc, học sinh được rèn luyện ý thức tự giác và kỷ luật tốt. Các quy tắc và nề nếp được duy trì chặt chẽ, giúp môi trường học tập trở nên nề nếp và hiệu quả.</li>
+		 	<li> Học sinh được tham gia sinh hoạt ngoại khóa: Trường thường xuyên tổ chức các hoạt động ngoại khóa, bao gồm văn nghệ, thể thao, các câu lạc bộ như CLB Lãnh đạo trẻ, CLB Văn nghệ, CLB Kỹ thuật và nhiều hoạt động khác, giúp học sinh phát triển toàn diện về cả thể chất lẫn tinh thần.</li>
 
-    <div class="container">
-        <section id="academics" class="section">
-            <h2>Academic Journey</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>High School</h3>
-                        <p>GPA: 3.8</p>
-                        <p>Key Courses: Advanced Mathematics, Computer Science, Biology</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Academic Awards</h3>
-                        <p>Honor Roll</p>
-                        <p>Science Fair Winner</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="activities" class="section">
-            <h2>Extracurricular Activities</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Debate Club</h3>
-                        <p>Role: Vice President</p>
-                        <p>Achievements: State Championship Finalist</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Robotics Team</h3>
-                        <p>Role: Lead Engineer</p>
-                        <p>Achievements: Regional Competition Winner</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 My School Journey. All Rights Reserved.</p>
-    </footer>
-</body>
+			</ul>
+		</li>
+		</ul>
+		<img src = "thư viện.jpg" width = 500 height = 400>
+		<hr>
+		<h2 id = "hoat_dong"> Hoạt động </h2>
+		<ul>
+			<li> Trường THPT Quốc Oai đã tổ chức chuỗi hoạt động trải nghiệm Tết 2025 với chủ đề "Sắc xuân quê hương", mang đến không khí Tết ấm áp và ý nghĩa. Các hoạt động nổi bật bao gồm thiết kế không gian Tết truyền thống, cuộc thi gói bánh chưng, bánh tét, trao quà Tết cho học sinh khó khăn, triển lãm Tết cổ truyền và chương trình Tết sum vầy với các trò chơi dân gian. Những hoạt động này không chỉ tạo ra những khoảnh khắc vui tươi, gắn kết mà còn lan tỏa tinh thần sẻ chia, gìn giữ bản sắc văn hóa dân tộc.</li>
+		</ul>
+		<img src = "7fc04bc6-60e7-4802-afa1-03cf926042e4" width = 800 height 400>
+		<hr>
+		<h2 id = "thanh_tich"> Thành tích </h2>
+		<i> Tròn 60 năm xây dựng và phát triển, trường đã đạt được rất nhiều thành tích, như việc liên tục đạt danh hiệu Trường tiên tiến xuất sắc, đón nhận huân chương lao động, giáo viên đạt danh hiệu chiến sĩ thi đua, giáo viên giỏi cấp cơ sở,... Học sinh của trường cũng giành nhiều giải thưởng trong các kỳ thi Học sinh giỏi cấp thành phố, cấp Quốc gia. </i>
+		<ul>
+			<li> Bằng khen của Chủ tịch UBND Thành phố Hà Nội (năm 2017)</li>
+			<li> Trường đạt chuẩn Quốc gia Mức độ 1 (Năm 2018) </li>
+			<li> Bằng khen của Bộ trưởng Bộ Giáo dục và Đào tạo (năm 2018, 2020, 2022) </li>
+			<li> Trường đạt kiểm định Mức độ 3. Đạt chuẩn quốc gia Mức độ 2 (Năm 2024) </li>
+			<li> Bằng khen của Thủ tướng Chính phủ (Năm 2024) </li>
+			<li> Trong kỳ thi học sinh giỏi lớp 12 cấp thành phố năm học 2022, nhà trường đạt 14 giải. Trong đó có 1 giải Nhất, 4 giải Nhì, 3 giải Ba và 6 giải Khuyến khích. Cụ thể, em Nguyễn Ngọc Lễ, lớp 12A6 đạt giải Nhất môn Toán kỳ thi học sinh giỏi cấp Thành phố. Em Ngô Đức Uy lớp 12A6 đạt giải Nhì môn Vật lý, đồng thời cũng là học sinh đầu tiên trên địa bàn huyện Quốc Oai được vinh dự kết nạp Đảng. </li>
+			<li> Kỳ thi tốt nghiệp THPT năm 2023, trường có 655 học sinh dự thi và 100% em đỗ tốt nghiệp. Ngoài ra, nhà trường có 40 học sinh đạt từ 27 điểm 3 môn trở lên; 458 học sinh từ 24 điểm...</li>
+			<li> Theo số liệu thống kê của Sở Giáo dục và Đào tạo Hà Nội về tốp các trường có điểm trung bình bài thi cao nhất của 9 môn thi, trường THPT Quốc Oai xếp thứ 2 ở môn vật lý. </li>
+			<li> Trường THPT Quốc Oai đã được Nhà nước trao tặng Huân chương Lao động hạng Ba (năm 2002), Huân chương Lao động hạng Nhì (năm 2007), Bằng khen của TTGCP (năm 2012), nhiều năm liền được Sở GDĐT Hà Nội công nhận danh hiệu Tập thể lao động xuất sắc. </li>
+		</ul>
+	</div>
+	</div>
+	<!-- Phần chân trang -->
+	<div class = "footer" id = "lien_he">
+		<img style = "border-radius: 50%;" src = "logo.jpg" height="50" width="50">
+		<p> Mọi ý kiến đóng góp vui lòng liên hệ số điện thoại 0123456789 hoặc đóng góp qua link sau:
+		<a style = "text-decoration: none; color: red; font-size: 20px" href = "feedback.html"> ĐÓNG GÓP </a>
+		</p>
+		</div>
+	</div>
+	</div>	
+	</div>
+</body>	
 </html>
